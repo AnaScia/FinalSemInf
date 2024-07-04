@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  node:
+    build: .
+    ports:
+      - '3232:3232'
+    links:
+      - mongo
+  monguito:
+    image: mongo
+    ports:
+      - '27027:27027'
